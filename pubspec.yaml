@@ -90,5 +90,23 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  # TDDO: add last images
   assets:
     - assets/img/House Targaryen.webp
+    - assets/img/House Tarly.webp
+    - assets/img/House Stark.webp
+    - assets/img/House Baratheon.webp
+    - assets/img/Baratheon.webp
+    - assets/img/House Lanister.webp
+    - assets/img/House Lannister.webp
+    - assets/img/House Greyjoy.webp
+    - assets/img/House Clegane.webp
+    - assets/img/House Baelish.webp
+    - assets/img/House Seaworth.webp
+    - assets/img/Unknown.webp
+    - assets/img/House Tyrell.webp
+    - assets/img/Free Folk.webp
+    - assets/img/Tarth.webp
+    - assets/img/Naathi.webp
+    - assets/img/None.webp
+    - assets/img/Targaryan.webp
