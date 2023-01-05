@@ -4,8 +4,12 @@ class CardTemplate extends StatelessWidget {
   String name = "Daenerys Targaryen";
   String title = "Mother of Dragons";
   String family = "House Targaryen";
-  String imageFamily = "assets/img/House Targaryen.webp";
+  String familyImage = "assets/img/House Targaryen.webp";
   String imageUrl = "https://thronesapi.com/assets/images/daenerys.jpg";
+
+  CardTemplate(this.name, this.title, this.family, this.imageUrl) {
+    familyImage = "assets/img/$family.webp";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +45,7 @@ class CardTemplate extends StatelessWidget {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: AssetImage(imageFamily),
+                          image: AssetImage(familyImage),
                         ),
                       ),
                     ),
