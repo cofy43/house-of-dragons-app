@@ -20,7 +20,6 @@ class CardClass {
   });
 
   factory CardClass.fromJson(Map<String, dynamic> json) {
-    print(json);
     return CardClass(
         name: json['fullName'],
         title: json['title'],
@@ -87,8 +86,6 @@ class _CardList extends State<CardList> {
                 scrollDirection: Axis.horizontal,
                 itemCount: snapshot.data!.length,
                 itemBuilder: (context, index) {
-                  print("snapshot.data![index]");
-                  print(snapshot.data![index]);
                   return CardTemplate(
                       snapshot.data![index].name,
                       snapshot.data![index].title,
