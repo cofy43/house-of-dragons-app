@@ -20,58 +20,56 @@ class CardTemplate extends StatelessWidget {
         shadowColor: Colors.black26,
         child: SizedBox(
           width: 300,
-          height: 500,
+          height: 520,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                CircleAvatar(
-                  radius: 100,
-                  child: CircleAvatar(
-                    radius: 100,
-                      backgroundImage: NetworkImage(
-                        imageUrl,
-                      )
+                Container(
+                  height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(imageUrl),
+                      ),
+                    ),
+                ),
+                SizedBox(
+                  height: 100,
+                  child: Center(
+                    child: Flexible(
+                      child: Text(
+                        name,
+                        overflow: TextOverflow.fade,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    Container(
-                      width: 90,
-                      height: 90,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(familyImage),
-                        ),
+                SizedBox(
+                  height: 40,
+                  child: Center(
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        color: Colors.black38,
                       ),
                     ),
-                    Flexible(
-                      child: Container(
-                        padding: const EdgeInsets.only(left: 13.0),
-                        child: Text(
-                          name,
-                          overflow: TextOverflow.fade,
-                          style: const TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
+                  ),
+                ),
+                Container(
+                  width: 140,
+                  height: 140,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(familyImage),
                     ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    color: Colors.black38,
                   ),
                 ),
               ],
