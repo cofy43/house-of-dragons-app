@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:game_of_thrones/home.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // transparent status bar
+  ));
+
   runApp(const MyApp());
 }
 

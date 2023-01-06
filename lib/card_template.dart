@@ -55,17 +55,16 @@ class CardTemplate extends StatelessWidget {
                       title,
                       style: const TextStyle(
                         fontSize: 15,
-                        color: Colors.black38,
                       ),
                     ),
                   ),
                 ),
                 Container(
-                  width: 140,
+                  width: 200,
                   height: 140,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      fit: BoxFit.cover,
+
                       image: AssetImage(familyImage),
                     ),
                   ),
