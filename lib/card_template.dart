@@ -37,16 +37,7 @@ class CardTemplate extends StatelessWidget {
                 SizedBox(
                   height: 100,
                   child: Center(
-                    child: Flexible(
-                      child: Text(
-                        name,
-                        overflow: TextOverflow.fade,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
+                    chig,
                     ),
                   ),
                 ),
