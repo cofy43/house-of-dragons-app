@@ -16,6 +16,7 @@ class _Home extends State<Home> {
     // TODO: implement build
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false, 
       home: Scaffold(
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
