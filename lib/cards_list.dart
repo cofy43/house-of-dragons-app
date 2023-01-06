@@ -82,7 +82,7 @@ class _CardList extends State<CardList> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
-                padding: const EdgeInsets.only(left: 30),
+                padding: const EdgeInsets.only(left: 15),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: snapshot.data!.length,
