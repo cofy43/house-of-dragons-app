@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cards_list.dart';
+import 'characters_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -36,6 +36,7 @@ class _Home extends State<Home> {
             ),
 
             darkTheme: ThemeData(
+              primaryColor: const Color(0xFF1A374D),
               scaffoldBackgroundColor: const Color(0xFF406882),
               textTheme: const TextTheme(
                   bodyMedium: TextStyle(color: Colors.white),
@@ -72,13 +73,7 @@ class _Home extends State<Home> {
                   )
                 ],
               ),
-              body: Column(
-                children: [
-                  Expanded(
-                    child: CardList(),
-                  )
-                ],
-              )
+              body: CharactersScreen(),
             ),
           );
         }
