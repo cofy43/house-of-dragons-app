@@ -4,6 +4,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:scroll_snap_list/scroll_snap_list.dart';
+
 import 'card_template.dart';
 
 class CardClass {
@@ -75,25 +77,28 @@ class _CardList extends State<CardList> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Center(
       child: FutureBuilder<List<CardClass>>(
           future: fetchAlbum(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return ListView.builder(
-                padding: const EdgeInsets.only(left: 15),
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: snapshot.data!.length,
+              return ScrollSnapList(
                 itemBuilder: (context, index) {
-                  return CardTemplate(
-                      snapshot.data![index].name,
-                      snapshot.data![index].title,
-                      snapshot.data![index].family,
-                      snapshot.data![index].imageUrl
+                  return Container(
+                    width: 300,
+                    child: CardTemplate(
+                        snapshot.data![index].name,
+                        snapshot.data![index].title,
+                        snapshot.data![index].family,
+                        snapshot.data![index].imageUrl
+                    ),
                   );
                 },
+                itemCount: snapshot.data!.length,
+                itemSize: 300,
+                onItemFocus: (index) {},
+                dynamicItemSize: true,
+                scrollDirection: Axis.horizontal,
               );
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');

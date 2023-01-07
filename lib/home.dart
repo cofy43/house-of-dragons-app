@@ -30,6 +30,9 @@ class _Home extends State<Home> {
               appBarTheme: const AppBarTheme(
                 backgroundColor: Color(0xFF331C0E)
               ),
+              cardTheme: const CardTheme(
+                  shadowColor: Color(0xFF331C0E)
+              ),
             ),
 
             darkTheme: ThemeData(
@@ -40,6 +43,9 @@ class _Home extends State<Home> {
               cardColor: const Color(0xFF6998AB),
               appBarTheme: const AppBarTheme(
                   backgroundColor: Color(0xFF1A374D)
+              ),
+              cardTheme: const CardTheme(
+                shadowColor: Color(0xFF1A374D)
               ),
             ),
             themeMode: currentMode,
@@ -66,7 +72,13 @@ class _Home extends State<Home> {
                   )
                 ],
               ),
-              body: CardList(),
+              body: Column(
+                children: [
+                  Expanded(
+                    child: CardList(),
+                  )
+                ],
+              )
             ),
           );
         }

@@ -16,11 +16,9 @@ class CardTemplate extends StatelessWidget {
     // TODO: implement build
     return Center(
       child: Card(
-        margin: const EdgeInsets.only(left: 35),
-        elevation: 50,
-        shadowColor: Colors.black26,
+        elevation: 100,
         child: SizedBox(
-          width: 300,
+          width: 280,
           height: 520,
           child: Padding(
             padding: const EdgeInsets.all(15),
