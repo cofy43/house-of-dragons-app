@@ -30,7 +30,6 @@ class CardTemplate extends StatelessWidget {
                   height: 200,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        fit: BoxFit.cover,
                         image: NetworkImage(imageUrl),
                       ),
                     ),
